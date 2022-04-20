@@ -259,7 +259,7 @@ export default function Home() {
       return (
         <div>
           <div className={styles.description} onClick={publicMint}>
-            Presale has started!!! If your address is whitelisted, Mint a Crypto
+            Presale has started!!! If your address is whitelisted, Mint a Crypto now
             Dev 🥳
           </div>
           <button className={styles.button} onClick={presaleMint}>Presale Mint 🚀</button>
