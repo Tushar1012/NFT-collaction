@@ -103,6 +103,7 @@ export default function Home() {
     }
     
   };
+  // need to chee=ck about presale end or not
   const checkIfPresaleEnded = async () => {
     try {
       const provider = await getProviderOrSigner();
