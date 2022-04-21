@@ -82,7 +82,7 @@ export default function Home() {
  
   };
 
-
+  // this function for start presale
   const startPresale = async () => {
     
     try {
