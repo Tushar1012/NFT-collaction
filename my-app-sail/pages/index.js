@@ -12,7 +12,7 @@ export default function Home() {
   const [presaleEnded, setPresaleEnded] = useState(false);
   const [isOwner, setIsOwner] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [numTokenMinted , setNumTokenMinted]= useState("");
+  const [numTokenMinted , setNumTokenMinted]= useState("0");
   const web3ModalRef = useRef();
 
   const getNumMintedTokens = async () =>{
@@ -232,7 +232,7 @@ export default function Home() {
     }
 
     if (loading) {
-      return( <span className={styles.description}> Loading...</span>
+      return( <div className={styles.description}> Loading...</div>
       );
     }
     if (isOwner && !presaleStarted) {
@@ -266,15 +266,15 @@ export default function Home() {
         </div>
       );
     }
-    if (presaleEnded) {
+    if (presaleEnded)  {
       //allow users to tale part in public sale
       return (
         <div>
-          <span className={styles.description}>
+          <div className={styles.description}>
             presale has ended you can mint a cryptodev in public sale , if any
             remain
-          </span>
-          <button className={styles.button}> Public Mint 🚀</button>
+          </div>
+          <button className={styles.button} onClick={publicMint}> Public Mint 🚀</button>
         </div>
       );
     }
